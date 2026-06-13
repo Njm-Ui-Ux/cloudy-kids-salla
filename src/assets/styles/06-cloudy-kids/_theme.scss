@@ -1,0 +1,64 @@
+/* Cloudy Kids Theme Base */
+
+:root {
+  --ck-bg: #fcf8f8;
+  --ck-primary: #f7c9d4;
+  --ck-secondary: #eae6ff;
+  --ck-peach: #f7c9be;
+  --ck-sky: #d9eeff;
+
+  --ck-heading: #2f3552;
+  --ck-body: #59617b;
+  --ck-muted: #9ca4be;
+
+  --ck-glass: rgba(255, 255, 255, 0.68);
+  --ck-border: rgba(255, 255, 255, 0.8);
+
+  --ck-radius-lg: 32px;
+  --ck-radius-pill: 999px;
+
+  --ck-shadow-soft: 0 18px 45px rgba(47, 53, 82, 0.08);
+  --ck-shadow-button: 0 12px 30px rgba(247, 201, 212, 0.45);
+}
+
+body {
+  background:
+    radial-gradient(circle at top right, rgba(234, 230, 255, 0.9), transparent 34%),
+    radial-gradient(circle at top left, rgba(217, 238, 255, 0.8), transparent 30%),
+    linear-gradient(180deg, var(--ck-bg) 0%, #ffffff 100%);
+  color: var(--ck-body);
+}
+
+.s-product-card-entry,
+.product-entry,
+.salla-product-card {
+  border-radius: var(--ck-radius-lg) !important;
+  background: var(--ck-glass) !important;
+  border: 1px solid var(--ck-border) !important;
+  box-shadow: var(--ck-shadow-soft) !important;
+  overflow: hidden;
+}
+
+button,
+.s-button-btn,
+.s-add-product-button-main {
+  border-radius: var(--ck-radius-pill) !important;
+}
+
+.s-add-product-button-main {
+  background: linear-gradient(135deg, var(--ck-primary), var(--ck-peach)) !important;
+  color: var(--ck-heading) !important;
+  border: none !important;
+  box-shadow: var(--ck-shadow-button) !important;
+}
+
+a,
+.s-product-card-content-title a {
+  color: var(--ck-heading);
+}
+
+.s-product-card-price,
+.s-product-card-sale-price {
+  color: #b26d87 !important;
+  font-weight: 700;
+}
