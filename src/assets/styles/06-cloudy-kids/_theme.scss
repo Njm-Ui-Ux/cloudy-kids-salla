@@ -1298,14 +1298,14 @@ button[type='submit'] {
   padding: 58px 72px;
 
   background-image:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.92) 0%,
-      rgba(255, 255, 255, 0.78) 32%,
-      rgba(255, 255, 255, 0.18) 58%,
-      rgba(255, 255, 255, 0.05) 100%
-    ),
-    var(--ck-hero-bg) !important;
+  linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.10) 28%,
+    rgba(255, 255, 255, 0.05) 52%,
+    rgba(255, 255, 255, 0.16) 100%
+  ),
+  var(--ck-hero-bg) !important;
 
   background-size: cover !important;
   background-position: center center !important;
@@ -1318,8 +1318,8 @@ button[type='submit'] {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 18% 50%, rgba(255, 255, 255, 0.42), transparent 34%),
-    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.16));
+    radial-gradient(circle at 78% 48%, rgba(255, 255, 255, 0.18), transparent 36%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.04));
   z-index: 1;
 }
 
