@@ -1461,4 +1461,22 @@ button[type='submit'] {
     padding: 0 22px;
     font-size: 14px;
   }
+}/* =========================================================
+   FORCE Hero Background Image
+   ========================================================= */
+
+.ck-hero-v2__panel--image-bg {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.08) 34%,
+      rgba(255, 255, 255, 0.30) 58%,
+      rgba(255, 255, 255, 0.50) 100%
+    ),
+    url('../../images/cloudy-kids-hero.png') !important;
+
+  background-size: 102% auto !important;
+  background-position: left 0% top 22px !important;
+  background-repeat: no-repeat !important;
 }
