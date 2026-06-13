@@ -1284,4 +1284,108 @@ button[type='submit'] {
     height: 220px;
     border-radius: 26px;
   }
+}/* =========================================================
+   Hero Full Background Image
+   ========================================================= */
+
+.ck-hero-v2__panel--image-bg {
+  position: relative;
+  min-height: 430px;
+  grid-template-columns: 1fr !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 58px 72px;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.78) 32%,
+      rgba(255, 255, 255, 0.18) 58%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    url('/images/cloudy-kids-hero.png') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.ck-hero-v2__panel--image-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 50%, rgba(255, 255, 255, 0.42), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.16));
+  z-index: 1;
+}
+
+.ck-hero-v2__panel--image-bg .ck-hero-v2__content {
+  position: relative;
+  z-index: 2;
+  max-width: 470px;
+}
+
+.ck-hero-v2__panel--image-bg .ck-hero-v2__title {
+  color: #4a4784;
+  text-shadow: 0 8px 30px rgba(255, 255, 255, 0.48);
+}
+
+.ck-hero-v2__panel--image-bg .ck-hero-v2__title span {
+  color: #b66f9b;
+}
+
+.ck-hero-v2__panel--image-bg .ck-hero-v2__text {
+  color: #5f5a82;
+  max-width: 460px;
+}
+
+.ck-hero-v2__panel--image-bg .ck-pill {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Remove old visual image box if still exists */
+.ck-hero-v2__visual--image {
+  display: none !important;
+}
+
+@media (max-width: 991px) {
+  .ck-hero-v2__panel--image-bg {
+    min-height: 520px;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 34px 24px;
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.92) 0%,
+        rgba(255, 255, 255, 0.72) 36%,
+        rgba(255, 255, 255, 0.16) 72%,
+        rgba(255, 255, 255, 0.05) 100%
+      ),
+      url('/images/cloudy-kids-hero.png') !important;
+    background-position: center bottom !important;
+  }
+
+  .ck-hero-v2__panel--image-bg .ck-hero-v2__content {
+    margin-inline: auto;
+  }
+
+  .ck-hero-v2__panel--image-bg .ck-hero-v2__actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .ck-hero-v2__panel--image-bg {
+    min-height: 500px;
+    border-radius: 28px;
+    padding: 28px 18px;
+    background-size: cover !important;
+    background-position: center bottom !important;
+  }
 }
