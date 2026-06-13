@@ -1,14 +1,63 @@
 {#
-| Variable         | Type       | Description                                                         |
-|------------------|------------|---------------------------------------------------------------------|
-| page             | object     |                                                                     |
-| page.title       | string     | *could be html                                                      |
-| page.slug        | string     | ex: "cat.show"                                                      |
+| Variable       | Type     | Description
+|----------------|----------|-------------------------------
+| page           | object   |
+| page.title     | string   | *could be html
+| page.slug      | string   | ex: "cat.show"
 #}
+
 {% extends "layouts.master" %}
+
 {% block content %}
+
+  <section class="ck-hero">
+    <div class="ck-hero__container">
+      <div class="ck-hero__panel">
+        <div class="ck-hero__content">
+          <span class="ck-hero__badge">
+            ✨ اختيارات ناعمة لطفلك
+          </span>
+
+          <h1 class="ck-hero__title">
+            عالم طفلك<br>
+            <span>بكل حب وراحة</span>
+          </h1>
+
+          <p class="ck-hero__text">
+            منتجات مختارة بعناية للأطفال، بتفاصيل ناعمة وألوان هادئة وتجربة تسوق مريحة تناسب الأمهات والعائلة.
+          </p>
+
+          <div class="ck-hero__actions">
+            <a href="#products" class="ck-btn-primary">
+              تسوق الآن
+            </a>
+
+            <a href="#categories" class="ck-btn-glass">
+              استكشف الفئات
+            </a>
+          </div>
+        </div>
+
+        <div class="ck-hero__visual">
+          <div class="ck-hero__circle">
+            <div class="ck-hero__toy">🧸</div>
+          </div>
+
+          <div class="ck-hero__mini-card">
+            <span>تجربة ناعمة</span>
+            <strong>مناسبة للجوال</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="products">
     {% component home %}
+  </div>
+
 {% endblock %}
+
 {% block scripts %}
-    <script defer src="{{ 'home.js' | asset }}"></script>
+  <script defer src="{{ 'home.js' | asset }}"></script>
 {% endblock %}
