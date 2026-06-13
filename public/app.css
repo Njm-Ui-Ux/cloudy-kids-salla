@@ -25679,8 +25679,8 @@ button[type=submit] {
 .ck-hero-v2__panel--image-bg {
   display: block !important;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.08) 34%, rgba(255, 255, 255, 0.3) 58%, rgba(255, 255, 255, 0.5) 100%), var(--ck-hero-bg) !important;
-  background-size: 102% auto !important;
-  background-position: left 0% top 22px !important;
+  background-size: auto 112% !important;
+  background-position: left center top -28px !important;
   background-repeat: no-repeat !important;
 }
 .ck-hero-v2__panel--image-bg {
