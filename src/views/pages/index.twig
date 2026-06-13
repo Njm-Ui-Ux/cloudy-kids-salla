@@ -10,166 +10,270 @@
 
 {% block content %}
 
-  <main class="ck-page">
+<main class="ck-page" id="home">
 
-    <section class="ck-hero" id="home">
-      <div class="ck-hero__cloud ck-hero__cloud--one"></div>
-      <div class="ck-hero__cloud ck-hero__cloud--two"></div>
-      <div class="ck-hero__cloud ck-hero__cloud--three"></div>
+  <section class="ck-hero-v2">
+    <div class="ck-hero-v2__cloud ck-hero-v2__cloud--one"></div>
+    <div class="ck-hero-v2__cloud ck-hero-v2__cloud--two"></div>
+    <div class="ck-hero-v2__cloud ck-hero-v2__cloud--three"></div>
 
-      <div class="ck-container">
-        <div class="ck-hero__panel">
-          <div class="ck-hero__content">
-            <span class="ck-badge">
-              ✨ اختيارات ناعمة للأطفال
-            </span>
+    <div class="ck-container">
+      <div class="ck-hero-v2__panel">
 
-            <h1 class="ck-hero__title">
-              عالم طفلك
-              <span>بكل حب وراحة</span>
-            </h1>
+        <div class="ck-hero-v2__content">
+          <span class="ck-pill">
+            مختارات ناعمة بحب
+          </span>
 
-            <p class="ck-hero__text">
-              تجربة تسوق هادئة وناعمة لمنتجات الأطفال، بتفاصيل مختارة بعناية، وألوان مريحة، وتصميم يناسب الأمهات والعائلة.
-            </p>
+          <h1 class="ck-hero-v2__title">
+            عالم طفلك
+            <span>بكل حب</span>
+          </h1>
 
-            <div class="ck-hero__actions">
-              <a href="#products" class="ck-btn ck-btn--primary">
-                تسوق الآن
-              </a>
+          <p class="ck-hero-v2__text">
+            منتجات آمنة، ناعمة، ومختارة بعناية لتصنع لطفلك راحة أجمل، وتجربة تسوق هادئة للأم والعائلة في كل لحظة.
+          </p>
 
-              <a href="#categories" class="ck-btn ck-btn--glass">
-                استكشف الفئات
-              </a>
-            </div>
+          <div class="ck-hero-v2__actions">
+            <a href="#products" class="ck-btn-v2 ck-btn-v2--primary">
+              تسوق الآن
+            </a>
 
-            <div class="ck-hero__trust">
-              <div class="ck-trust-item">
-                <span>🧸</span>
-                <strong>منتجات مختارة</strong>
-              </div>
-
-              <div class="ck-trust-item">
-                <span>🌸</span>
-                <strong>ألوان ناعمة</strong>
-              </div>
-
-              <div class="ck-trust-item">
-                <span>🚚</span>
-                <strong>تجربة سهلة</strong>
-              </div>
-            </div>
+            <a href="#categories" class="ck-btn-v2 ck-btn-v2--secondary">
+              اكتشف الفئات
+            </a>
           </div>
+        </div>
 
-          <div class="ck-hero__visual">
-            <div class="ck-hero__orb">
-              <div class="ck-hero__toy">🧸</div>
-            </div>
+        <div class="ck-hero-v2__visual">
+          <div class="ck-scene">
+            <div class="ck-moon"></div>
+            <div class="ck-star ck-star--one"></div>
+            <div class="ck-star ck-star--two"></div>
+            <div class="ck-balloon"></div>
 
-            <div class="ck-floating-card ck-floating-card--one">
-              <span>مختارة بعناية</span>
-              <strong>لراحة طفلك</strong>
-            </div>
+            <div class="ck-cloud-bed ck-cloud-bed--one"></div>
+            <div class="ck-cloud-bed ck-cloud-bed--two"></div>
+            <div class="ck-cloud-bed ck-cloud-bed--three"></div>
 
-            <div class="ck-floating-card ck-floating-card--two">
-              <span>تصميم ناعم</span>
-              <strong>تجربة مريحة</strong>
+            <div class="ck-teddy">
+              <span class="ck-teddy__ear ck-teddy__ear--left"></span>
+              <span class="ck-teddy__ear ck-teddy__ear--right"></span>
+              <span class="ck-teddy__head"></span>
+              <span class="ck-teddy__body"></span>
+              <span class="ck-teddy__arm ck-teddy__arm--left"></span>
+              <span class="ck-teddy__arm ck-teddy__arm--right"></span>
+              <span class="ck-teddy__foot ck-teddy__foot--left"></span>
+              <span class="ck-teddy__foot ck-teddy__foot--right"></span>
             </div>
           </div>
         </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="ck-categories" id="categories">
-      <div class="ck-container">
-        <div class="ck-section-head">
-          <span class="ck-section-kicker">تسوق حسب الاهتمام</span>
-          <h2>فئات ناعمة تناسب عالم الأطفال</h2>
-          <p>قسّمنا التجربة لتكون سهلة وواضحة، مع بطاقات لطيفة تساعد الزائر يوصل بسرعة لما يحتاجه.</p>
-        </div>
+  <section class="ck-category-strip" id="categories">
+    <div class="ck-container">
+      <div class="ck-category-strip__grid">
 
-        <div class="ck-category-grid">
-          <a href="#products" class="ck-category-card">
-            <span class="ck-category-card__icon">👗</span>
-            <strong>ملابس الأطفال</strong>
-            <small>فساتين، أطقم، وقطع يومية</small>
-          </a>
+        <a href="#products" class="ck-icon-category">
+          <span class="ck-icon-category__icon">🎁</span>
+          <strong>الهدايا</strong>
+        </a>
 
-          <a href="#products" class="ck-category-card">
-            <span class="ck-category-card__icon">🎁</span>
-            <strong>هدايا وإكسسوارات</strong>
-            <small>اختيارات لطيفة للمناسبات</small>
-          </a>
+        <a href="#products" class="ck-icon-category">
+          <span class="ck-icon-category__icon">📚</span>
+          <strong>الكتب</strong>
+        </a>
 
-          <a href="#products" class="ck-category-card">
-            <span class="ck-category-card__icon">🍼</span>
-            <strong>العناية والراحة</strong>
-            <small>منتجات مناسبة لاحتياج الطفل</small>
-          </a>
+        <a href="#products" class="ck-icon-category">
+          <span class="ck-icon-category__icon">🏠</span>
+          <strong>المنزل</strong>
+        </a>
 
-          <a href="#products" class="ck-category-card">
-            <span class="ck-category-card__icon">🌈</span>
-            <strong>مختارات موسمية</strong>
-            <small>ألوان ناعمة وتجدد دائم</small>
-          </a>
-        </div>
+        <a href="#products" class="ck-icon-category">
+          <span class="ck-icon-category__icon">🌙</span>
+          <strong>النوم</strong>
+        </a>
+
+        <a href="#products" class="ck-icon-category">
+          <span class="ck-icon-category__icon">🍼</span>
+          <strong>الرضاعة</strong>
+        </a>
+
+        <a href="#products" class="ck-icon-category">
+          <span class="ck-icon-category__icon">🧸</span>
+          <strong>الألعاب</strong>
+        </a>
+
+        <a href="#products" class="ck-icon-category">
+          <span class="ck-icon-category__icon">👗</span>
+          <strong>الملابس</strong>
+        </a>
+
+        <a href="#products" class="ck-icon-category ck-icon-category--all">
+          <span class="ck-icon-category__icon">☰</span>
+          <strong>كل الفئات</strong>
+        </a>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="ck-benefits">
-      <div class="ck-container">
-        <div class="ck-benefits__grid">
-          <div class="ck-benefit-card">
-            <span>☁️</span>
-            <h3>تصميم هادئ</h3>
-            <p>ألوان باستيل ومساحات مريحة تخلي تجربة التسوق أخف وأسهل.</p>
-          </div>
-
-          <div class="ck-benefit-card">
-            <span>📱</span>
-            <h3>مناسب للجوال</h3>
-            <p>تجربة مصممة لتظهر بشكل مرتب على الشاشات الصغيرة أولًا.</p>
-          </div>
-
-          <div class="ck-benefit-card">
-            <span>🛍️</span>
-            <h3>شراء واضح</h3>
-            <p>أزرار وكروت منتجات ناعمة وواضحة تساعد العميل يتخذ القرار بسرعة.</p>
-          </div>
-        </div>
+  <section class="ck-products-area" id="products">
+    <div class="ck-container">
+      <div class="ck-section-title">
+        <span>منتجات مميزة</span>
+        <h2>اختيارات ناعمة لطفلك</h2>
       </div>
-    </section>
+    </div>
 
-    <section class="ck-products-shell" id="products">
-      <div class="ck-container">
-        <div class="ck-section-head ck-section-head--compact">
-          <span class="ck-section-kicker">وصل حديثًا</span>
-          <h2>أحدث المنتجات</h2>
-        </div>
-      </div>
-
+    <div class="ck-products-native">
       {% component home %}
-    </section>
+    </div>
+  </section>
 
-    <section class="ck-soft-banner">
-      <div class="ck-container">
-        <div class="ck-soft-banner__panel">
-          <div>
-            <span class="ck-section-kicker">Cloudy Kids</span>
-            <h2>كل تفصيلة هنا مصممة لتكون ألطف</h2>
-            <p>
-              ثيم هادئ، ناعم، ومناسب لمتاجر الأطفال، مع قابلية تطويره لاحقًا لفئات، بانرات، وتجربة جوال أكثر احترافية.
-            </p>
-          </div>
+  <section class="ck-offer-banner">
+    <div class="ck-container">
+      <div class="ck-offer-banner__panel">
+        <div class="ck-offer-banner__side">
+          <span>خصم</span>
+          <strong>20%</strong>
+          <small>على مجموعة مختارة</small>
+        </div>
 
-          <a href="#products" class="ck-btn ck-btn--primary">
-            ابدأ التسوق
-          </a>
+        <div class="ck-offer-banner__main">
+          <span class="ck-pill ck-pill--light">عرض لفترة محدودة</span>
+          <h2>عالم من العناية والحب</h2>
+          <p>لأن طفلك يستحق الأفضل دائمًا، اخترنا لك منتجات ناعمة بتجربة تسوق أكثر هدوءًا وأناقة.</p>
+        </div>
+
+        <a href="#products" class="ck-btn-v2 ck-btn-v2--primary">
+          تسوق العرض
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ck-new-arrivals">
+    <div class="ck-container">
+      <div class="ck-section-title">
+        <span>وصل حديثًا</span>
+        <h2>لمسات جديدة لعالم طفلك</h2>
+      </div>
+
+      <div class="ck-arrival-grid">
+        <div class="ck-arrival-card">
+          <span class="ck-arrival-card__icon">🧸</span>
+          <strong>دمى ناعمة</strong>
+          <small>لمسة لطيفة لكل يوم</small>
+        </div>
+
+        <div class="ck-arrival-card">
+          <span class="ck-arrival-card__icon">🍼</span>
+          <strong>رضاعات وأدوات</strong>
+          <small>اختيارات عملية وآمنة</small>
+        </div>
+
+        <div class="ck-arrival-card">
+          <span class="ck-arrival-card__icon">👕</span>
+          <strong>ملابس يومية</strong>
+          <small>ألوان هادئة ومريحة</small>
+        </div>
+
+        <div class="ck-arrival-card">
+          <span class="ck-arrival-card__icon">🎲</span>
+          <strong>ألعاب تعليمية</strong>
+          <small>متعة واكتشاف</small>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <section class="ck-trust-row">
+    <div class="ck-container">
+      <div class="ck-trust-row__panel">
+        <div class="ck-trust-box">
+          <span>🚚</span>
+          <strong>شحن سريع</strong>
+          <small>تجربة توصيل مريحة</small>
+        </div>
+
+        <div class="ck-trust-box">
+          <span>🛡️</span>
+          <strong>منتجات آمنة</strong>
+          <small>مختارة بعناية</small>
+        </div>
+
+        <div class="ck-trust-box">
+          <span>💎</span>
+          <strong>جودة مصممة</strong>
+          <small>نهتم بكل تفصيلة</small>
+        </div>
+
+        <div class="ck-trust-box">
+          <span>🎧</span>
+          <strong>دعم العملاء</strong>
+          <small>نحن هنا لمساعدتك</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ck-testimonials">
+    <div class="ck-container">
+      <div class="ck-section-title">
+        <span>ماذا يقول عملاؤنا؟</span>
+        <h2>تجربة لطيفة وموثوقة</h2>
+      </div>
+
+      <div class="ck-testimonial-grid">
+        <div class="ck-testimonial-card">
+          <p>جودة المنتجات رائعة والتجربة سهلة جدًا، أحببت هدوء التصميم وسرعة الوصول للمنتجات.</p>
+          <div>
+            <strong>أمل السبيعي</strong>
+            <span>★★★★★</span>
+          </div>
+        </div>
+
+        <div class="ck-testimonial-card">
+          <p>المتجر مرتب وواضح، المنتجات تظهر بشكل جميل والشراء كان بسيطًا من الجوال.</p>
+          <div>
+            <strong>سارة الحربي</strong>
+            <span>★★★★★</span>
+          </div>
+        </div>
+
+        <div class="ck-testimonial-card">
+          <p>أحببت الألوان الهادئة وطريقة عرض المنتجات، تجربة مناسبة جدًا لمتجر أطفال.</p>
+          <div>
+            <strong>نورة العتيبي</strong>
+            <span>★★★★★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ck-newsletter">
+    <div class="ck-container">
+      <div class="ck-newsletter__panel">
+        <div>
+          <span class="ck-pill ck-pill--light">اشترك في نشرتنا</span>
+          <h2>كن أول من يعرف بالعروض الجديدة</h2>
+          <p>احصل على أخبار المنتجات والعروض الناعمة أولًا بأول.</p>
+        </div>
+
+        <form class="ck-newsletter__form" action="#">
+          <input type="email" placeholder="ادخل بريدك الإلكتروني">
+          <button type="submit">اشتراك</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 {% endblock %}
 
