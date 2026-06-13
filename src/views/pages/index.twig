@@ -10,51 +10,166 @@
 
 {% block content %}
 
-  <section class="ck-hero">
-    <div class="ck-hero__container">
-      <div class="ck-hero__panel">
-        <div class="ck-hero__content">
-          <span class="ck-hero__badge">
-            ✨ اختيارات ناعمة لطفلك
-          </span>
+  <main class="ck-page">
 
-          <h1 class="ck-hero__title">
-            عالم طفلك<br>
-            <span>بكل حب وراحة</span>
-          </h1>
+    <section class="ck-hero" id="home">
+      <div class="ck-hero__cloud ck-hero__cloud--one"></div>
+      <div class="ck-hero__cloud ck-hero__cloud--two"></div>
+      <div class="ck-hero__cloud ck-hero__cloud--three"></div>
 
-          <p class="ck-hero__text">
-            منتجات مختارة بعناية للأطفال، بتفاصيل ناعمة وألوان هادئة وتجربة تسوق مريحة تناسب الأمهات والعائلة.
-          </p>
+      <div class="ck-container">
+        <div class="ck-hero__panel">
+          <div class="ck-hero__content">
+            <span class="ck-badge">
+              ✨ اختيارات ناعمة للأطفال
+            </span>
 
-          <div class="ck-hero__actions">
-            <a href="#products" class="ck-btn-primary">
-              تسوق الآن
-            </a>
+            <h1 class="ck-hero__title">
+              عالم طفلك
+              <span>بكل حب وراحة</span>
+            </h1>
 
-            <a href="#categories" class="ck-btn-glass">
-              استكشف الفئات
-            </a>
+            <p class="ck-hero__text">
+              تجربة تسوق هادئة وناعمة لمنتجات الأطفال، بتفاصيل مختارة بعناية، وألوان مريحة، وتصميم يناسب الأمهات والعائلة.
+            </p>
+
+            <div class="ck-hero__actions">
+              <a href="#products" class="ck-btn ck-btn--primary">
+                تسوق الآن
+              </a>
+
+              <a href="#categories" class="ck-btn ck-btn--glass">
+                استكشف الفئات
+              </a>
+            </div>
+
+            <div class="ck-hero__trust">
+              <div class="ck-trust-item">
+                <span>🧸</span>
+                <strong>منتجات مختارة</strong>
+              </div>
+
+              <div class="ck-trust-item">
+                <span>🌸</span>
+                <strong>ألوان ناعمة</strong>
+              </div>
+
+              <div class="ck-trust-item">
+                <span>🚚</span>
+                <strong>تجربة سهلة</strong>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="ck-hero__visual">
-          <div class="ck-hero__circle">
-            <div class="ck-hero__toy">🧸</div>
-          </div>
+          <div class="ck-hero__visual">
+            <div class="ck-hero__orb">
+              <div class="ck-hero__toy">🧸</div>
+            </div>
 
-          <div class="ck-hero__mini-card">
-            <span>تجربة ناعمة</span>
-            <strong>مناسبة للجوال</strong>
+            <div class="ck-floating-card ck-floating-card--one">
+              <span>مختارة بعناية</span>
+              <strong>لراحة طفلك</strong>
+            </div>
+
+            <div class="ck-floating-card ck-floating-card--two">
+              <span>تصميم ناعم</span>
+              <strong>تجربة مريحة</strong>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div id="products">
-    {% component home %}
-  </div>
+    <section class="ck-categories" id="categories">
+      <div class="ck-container">
+        <div class="ck-section-head">
+          <span class="ck-section-kicker">تسوق حسب الاهتمام</span>
+          <h2>فئات ناعمة تناسب عالم الأطفال</h2>
+          <p>قسّمنا التجربة لتكون سهلة وواضحة، مع بطاقات لطيفة تساعد الزائر يوصل بسرعة لما يحتاجه.</p>
+        </div>
+
+        <div class="ck-category-grid">
+          <a href="#products" class="ck-category-card">
+            <span class="ck-category-card__icon">👗</span>
+            <strong>ملابس الأطفال</strong>
+            <small>فساتين، أطقم، وقطع يومية</small>
+          </a>
+
+          <a href="#products" class="ck-category-card">
+            <span class="ck-category-card__icon">🎁</span>
+            <strong>هدايا وإكسسوارات</strong>
+            <small>اختيارات لطيفة للمناسبات</small>
+          </a>
+
+          <a href="#products" class="ck-category-card">
+            <span class="ck-category-card__icon">🍼</span>
+            <strong>العناية والراحة</strong>
+            <small>منتجات مناسبة لاحتياج الطفل</small>
+          </a>
+
+          <a href="#products" class="ck-category-card">
+            <span class="ck-category-card__icon">🌈</span>
+            <strong>مختارات موسمية</strong>
+            <small>ألوان ناعمة وتجدد دائم</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ck-benefits">
+      <div class="ck-container">
+        <div class="ck-benefits__grid">
+          <div class="ck-benefit-card">
+            <span>☁️</span>
+            <h3>تصميم هادئ</h3>
+            <p>ألوان باستيل ومساحات مريحة تخلي تجربة التسوق أخف وأسهل.</p>
+          </div>
+
+          <div class="ck-benefit-card">
+            <span>📱</span>
+            <h3>مناسب للجوال</h3>
+            <p>تجربة مصممة لتظهر بشكل مرتب على الشاشات الصغيرة أولًا.</p>
+          </div>
+
+          <div class="ck-benefit-card">
+            <span>🛍️</span>
+            <h3>شراء واضح</h3>
+            <p>أزرار وكروت منتجات ناعمة وواضحة تساعد العميل يتخذ القرار بسرعة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ck-products-shell" id="products">
+      <div class="ck-container">
+        <div class="ck-section-head ck-section-head--compact">
+          <span class="ck-section-kicker">وصل حديثًا</span>
+          <h2>أحدث المنتجات</h2>
+        </div>
+      </div>
+
+      {% component home %}
+    </section>
+
+    <section class="ck-soft-banner">
+      <div class="ck-container">
+        <div class="ck-soft-banner__panel">
+          <div>
+            <span class="ck-section-kicker">Cloudy Kids</span>
+            <h2>كل تفصيلة هنا مصممة لتكون ألطف</h2>
+            <p>
+              ثيم هادئ، ناعم، ومناسب لمتاجر الأطفال، مع قابلية تطويره لاحقًا لفئات، بانرات، وتجربة جوال أكثر احترافية.
+            </p>
+          </div>
+
+          <a href="#products" class="ck-btn ck-btn--primary">
+            ابدأ التسوق
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
 {% endblock %}
 
