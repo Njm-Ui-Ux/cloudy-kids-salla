@@ -1,5 +1,5 @@
 /* =========================================================
-   Cloudy Kids Theme
+   Cloudy Kids Theme V1
    Soft Pastel / Kids Boutique / Mobile First
    ========================================================= */
 
@@ -8,11 +8,12 @@
   --ck-bg-soft: #fffafa;
 
   --ck-primary: #f7c9d4;
-  --ck-primary-strong: #eaa6ba;
+  --ck-primary-strong: #e9a4b7;
   --ck-secondary: #eae6ff;
   --ck-peach: #f7c9be;
   --ck-sky: #d9eeff;
   --ck-mint: #dff7ee;
+  --ck-cream: #fff6ea;
 
   --ck-heading: #2f3552;
   --ck-body: #59617b;
@@ -26,18 +27,18 @@
   --ck-radius-sm: 16px;
   --ck-radius-md: 24px;
   --ck-radius-lg: 32px;
-  --ck-radius-xl: 42px;
+  --ck-radius-xl: 44px;
   --ck-radius-pill: 999px;
 
   --ck-shadow-soft: 0 18px 45px rgba(47, 53, 82, 0.08);
-  --ck-shadow-card: 0 20px 55px rgba(47, 53, 82, 0.1);
-  --ck-shadow-button: 0 14px 35px rgba(247, 201, 212, 0.5);
+  --ck-shadow-card: 0 24px 70px rgba(47, 53, 82, 0.11);
+  --ck-shadow-button: 0 14px 36px rgba(247, 201, 212, 0.48);
 
   --ck-transition: 280ms ease;
 }
 
 /* =========================================================
-   Global
+   Global Base
    ========================================================= */
 
 html {
@@ -46,8 +47,8 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top right, rgba(234, 230, 255, 0.85), transparent 34%),
-    radial-gradient(circle at top left, rgba(217, 238, 255, 0.72), transparent 30%),
+    radial-gradient(circle at top right, rgba(234, 230, 255, 0.9), transparent 34%),
+    radial-gradient(circle at top left, rgba(217, 238, 255, 0.78), transparent 30%),
     linear-gradient(180deg, var(--ck-bg) 0%, #ffffff 100%) !important;
   color: var(--ck-body);
 }
@@ -60,7 +61,15 @@ select {
   font-family: inherit;
 }
 
-/* Prevent oversized logo/images */
+a {
+  transition: color var(--ck-transition), opacity var(--ck-transition);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* prevent huge broken store logo/image */
 header img,
 .navbar-brand img,
 .s-logo img,
@@ -73,17 +82,71 @@ header img,
 }
 
 /* =========================================================
-   Header / Top area
+   Layout Helpers
+   ========================================================= */
+
+.ck-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.ck-container {
+  width: min(1180px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.ck-section-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 34px;
+}
+
+.ck-section-head h2 {
+  margin: 10px 0 0;
+  color: var(--ck-heading) !important;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.25;
+  font-weight: 900 !important;
+  letter-spacing: -0.035em;
+}
+
+.ck-section-head p {
+  margin: 14px auto 0;
+  color: var(--ck-body);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.ck-section-head--compact {
+  margin-bottom: 18px;
+}
+
+.ck-section-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 16px;
+  border-radius: var(--ck-radius-pill);
+  color: #b26d87;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   Header / Top Area
    ========================================================= */
 
 .store-header,
 .main-nav-container,
 .header-main,
 header {
-  background: rgba(255, 255, 255, 0.82) !important;
+  background: rgba(255, 255, 255, 0.84) !important;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(234, 230, 255, 0.7);
+  border-bottom: 1px solid rgba(234, 230, 255, 0.72);
 }
 
 .top-navbar,
@@ -96,7 +159,7 @@ header {
 .main-nav-container a,
 header a {
   color: var(--ck-heading) !important;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .main-menu li a:hover,
@@ -105,18 +168,17 @@ header a:hover {
   color: #b26d87 !important;
 }
 
-/* Search */
 .search-input,
 .s-search-input,
 input[type='search'] {
   border-radius: var(--ck-radius-pill) !important;
-  background: rgba(255, 255, 255, 0.82) !important;
-  border: 1px solid rgba(234, 230, 255, 0.9) !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  border: 1px solid rgba(234, 230, 255, 0.95) !important;
   box-shadow: 0 8px 24px rgba(47, 53, 82, 0.05);
 }
 
 /* =========================================================
-   General Buttons
+   Buttons
    ========================================================= */
 
 button,
@@ -128,7 +190,8 @@ a.btn {
   transition:
     transform var(--ck-transition),
     box-shadow var(--ck-transition),
-    background var(--ck-transition);
+    background var(--ck-transition),
+    border-color var(--ck-transition);
 }
 
 button:hover,
@@ -139,6 +202,27 @@ a.btn:hover {
   transform: translateY(-2px);
 }
 
+.ck-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 30px;
+  border-radius: var(--ck-radius-pill);
+  font-weight: 900;
+  text-decoration: none !important;
+  line-height: 1;
+  transition:
+    transform var(--ck-transition),
+    box-shadow var(--ck-transition),
+    background var(--ck-transition);
+}
+
+.ck-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.ck-btn--primary,
 .s-add-product-button-main,
 button[type='submit'],
 .s-button-primary {
@@ -146,16 +230,24 @@ button[type='submit'],
   color: var(--ck-heading) !important;
   border: none !important;
   box-shadow: var(--ck-shadow-button) !important;
-  font-weight: 700 !important;
+  font-weight: 900 !important;
 }
 
+.ck-btn--primary:hover,
 .s-add-product-button-main:hover,
 .s-button-primary:hover {
   background: linear-gradient(135deg, var(--ck-primary-strong), var(--ck-peach)) !important;
 }
 
+.ck-btn--glass {
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--ck-heading) !important;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  box-shadow: 0 12px 28px rgba(47, 53, 82, 0.06);
+}
+
 /* =========================================================
-   Cloudy Kids Hero
+   Hero
    ========================================================= */
 
 .ck-hero {
@@ -164,41 +256,40 @@ button[type='submit'],
   overflow: hidden;
 }
 
-.ck-hero::before,
-.ck-hero::after {
-  content: '';
+.ck-hero__cloud {
   position: absolute;
   pointer-events: none;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.56);
+  background: rgba(255, 255, 255, 0.58);
   filter: blur(8px);
   z-index: 0;
 }
 
-.ck-hero::before {
+.ck-hero__cloud--one {
   width: 260px;
-  height: 88px;
-  top: 44px;
+  height: 90px;
+  top: 48px;
   right: 10%;
 }
 
-.ck-hero::after {
-  width: 320px;
-  height: 100px;
-  bottom: 38px;
+.ck-hero__cloud--two {
+  width: 340px;
+  height: 104px;
+  bottom: 40px;
   left: 8%;
 }
 
-.ck-hero__container {
-  width: min(1180px, calc(100% - 32px));
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
+.ck-hero__cloud--three {
+  width: 190px;
+  height: 70px;
+  top: 50%;
+  left: 16%;
+  opacity: 0.55;
 }
 
 .ck-hero__panel {
   position: relative;
-  min-height: 430px;
+  min-height: 460px;
   border-radius: var(--ck-radius-xl);
   padding: 58px;
   display: grid;
@@ -206,15 +297,24 @@ button[type='submit'],
   align-items: center;
   gap: 34px;
   overflow: hidden;
-
   background:
-    radial-gradient(circle at 90% 15%, rgba(217, 238, 255, 0.8), transparent 34%),
+    radial-gradient(circle at 90% 15%, rgba(217, 238, 255, 0.82), transparent 34%),
     radial-gradient(circle at 20% 90%, rgba(247, 201, 212, 0.38), transparent 40%),
-    rgba(255, 255, 255, 0.74);
-  border: 1px solid rgba(255, 255, 255, 0.86);
+    rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.88);
   box-shadow: var(--ck-shadow-card);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.ck-hero__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.52), transparent 42%),
+    radial-gradient(circle at 50% 40%, rgba(234, 230, 255, 0.38), transparent 44%);
+  pointer-events: none;
 }
 
 .ck-hero__content {
@@ -222,36 +322,36 @@ button[type='submit'],
   z-index: 3;
 }
 
-.ck-hero__badge {
+.ck-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 9px 18px;
   margin-bottom: 22px;
   border-radius: var(--ck-radius-pill);
-  background: rgba(255, 255, 255, 0.74);
-  border: 1px solid rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.9);
   color: #b26d87;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .ck-hero__title {
   margin: 0;
   color: var(--ck-heading);
-  font-size: clamp(38px, 5vw, 68px);
-  line-height: 1.14;
-  font-weight: 900;
-  letter-spacing: -0.04em;
+  font-size: clamp(40px, 5vw, 74px);
+  line-height: 1.12;
+  font-weight: 950;
+  letter-spacing: -0.045em;
 }
 
 .ck-hero__title span {
-  display: inline-block;
+  display: block;
   color: #b26d87;
 }
 
 .ck-hero__text {
-  max-width: 520px;
+  max-width: 540px;
   margin: 22px 0 0;
   color: var(--ck-body);
   font-size: 17px;
@@ -266,92 +366,93 @@ button[type='submit'],
   flex-wrap: wrap;
 }
 
-.ck-btn-primary,
-.ck-btn-glass {
+.ck-hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.ck-trust-item {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 0 30px;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 14px;
   border-radius: var(--ck-radius-pill);
-  font-weight: 800;
-  text-decoration: none !important;
-  transition: transform var(--ck-transition), box-shadow var(--ck-transition);
-}
-
-.ck-btn-primary {
-  background: linear-gradient(135deg, var(--ck-primary), var(--ck-peach));
-  color: var(--ck-heading) !important;
-  box-shadow: var(--ck-shadow-button);
-}
-
-.ck-btn-glass {
-  background: rgba(255, 255, 255, 0.62);
-  color: var(--ck-heading) !important;
+  background: rgba(255, 255, 255, 0.56);
   border: 1px solid rgba(255, 255, 255, 0.82);
-  box-shadow: 0 12px 28px rgba(47, 53, 82, 0.06);
+  color: var(--ck-heading);
+  font-size: 13px;
 }
 
-.ck-btn-primary:hover,
-.ck-btn-glass:hover {
-  transform: translateY(-2px) scale(1.02);
+.ck-trust-item strong {
+  font-weight: 800;
 }
 
 .ck-hero__visual {
   position: relative;
-  min-height: 320px;
+  min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 3;
 }
 
-.ck-hero__circle {
-  width: min(340px, 78vw);
-  height: min(340px, 78vw);
+.ck-hero__orb {
+  width: min(350px, 78vw);
+  height: min(350px, 78vw);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.95), transparent 36%),
-    linear-gradient(135deg, rgba(247, 201, 212, 0.68), rgba(234, 230, 255, 0.72));
-  border: 1px solid rgba(255, 255, 255, 0.88);
-  box-shadow: 0 28px 70px rgba(172, 148, 194, 0.26);
+    radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.96), transparent 36%),
+    linear-gradient(135deg, rgba(247, 201, 212, 0.7), rgba(234, 230, 255, 0.74));
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 28px 75px rgba(172, 148, 194, 0.27);
 }
 
 .ck-hero__toy {
-  font-size: 112px;
+  font-size: 116px;
   filter: drop-shadow(0 18px 22px rgba(47, 53, 82, 0.16));
   animation: ckFloat 4s ease-in-out infinite;
 }
 
-.ck-hero__mini-card {
+.ck-floating-card {
   position: absolute;
-  right: 12px;
-  bottom: 18px;
   min-width: 170px;
   border-radius: 24px;
   padding: 16px 20px;
   color: var(--ck-heading);
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow: var(--ck-shadow-soft);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
-.ck-hero__mini-card span {
+.ck-floating-card span {
   display: block;
   color: var(--ck-muted);
   font-size: 13px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
-.ck-hero__mini-card strong {
+.ck-floating-card strong {
   display: block;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 950;
+}
+
+.ck-floating-card--one {
+  right: 4px;
+  bottom: 22px;
+}
+
+.ck-floating-card--two {
+  left: 6px;
+  top: 28px;
 }
 
 @keyframes ckFloat {
@@ -366,8 +467,131 @@ button[type='submit'],
 }
 
 /* =========================================================
-   Product Cards
+   Categories
    ========================================================= */
+
+.ck-categories {
+  padding: 24px 0 58px;
+}
+
+.ck-category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ck-category-card {
+  position: relative;
+  min-height: 180px;
+  padding: 24px;
+  border-radius: var(--ck-radius-lg);
+  background: var(--ck-glass);
+  border: 1px solid var(--ck-border);
+  box-shadow: var(--ck-shadow-soft);
+  text-decoration: none !important;
+  overflow: hidden;
+  transition: transform var(--ck-transition), box-shadow var(--ck-transition);
+}
+
+.ck-category-card::after {
+  content: '';
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  left: -22px;
+  bottom: -28px;
+  background: linear-gradient(135deg, rgba(247, 201, 212, 0.45), rgba(234, 230, 255, 0.5));
+}
+
+.ck-category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--ck-shadow-card);
+}
+
+.ck-category-card__icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 27px;
+}
+
+.ck-category-card strong,
+.ck-category-card small {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.ck-category-card strong {
+  color: var(--ck-heading);
+  font-size: 17px;
+  font-weight: 950;
+}
+
+.ck-category-card small {
+  margin-top: 8px;
+  color: var(--ck-body);
+  line-height: 1.7;
+}
+
+/* =========================================================
+   Benefits
+   ========================================================= */
+
+.ck-benefits {
+  padding: 12px 0 58px;
+}
+
+.ck-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ck-benefit-card {
+  padding: 26px;
+  border-radius: var(--ck-radius-lg);
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  box-shadow: var(--ck-shadow-soft);
+  text-align: center;
+}
+
+.ck-benefit-card span {
+  display: inline-flex;
+  margin-bottom: 14px;
+  font-size: 32px;
+}
+
+.ck-benefit-card h3 {
+  margin: 0;
+  color: var(--ck-heading);
+  font-size: 18px;
+  font-weight: 950;
+}
+
+.ck-benefit-card p {
+  margin: 10px 0 0;
+  color: var(--ck-body);
+  line-height: 1.85;
+}
+
+/* =========================================================
+   Product Area
+   ========================================================= */
+
+.ck-products-shell {
+  position: relative;
+  padding: 16px 0 40px;
+}
 
 .s-product-card-entry,
 .product-entry,
@@ -407,7 +631,7 @@ button[type='submit'],
 .product-entry__title,
 .product-entry__title a {
   color: var(--ck-heading) !important;
-  font-weight: 800 !important;
+  font-weight: 900 !important;
   line-height: 1.7;
 }
 
@@ -415,7 +639,7 @@ button[type='submit'],
 .s-product-card-sale-price,
 .product-entry__price {
   color: #b26d87 !important;
-  font-weight: 900 !important;
+  font-weight: 950 !important;
 }
 
 .s-product-card-regular-price,
@@ -427,38 +651,55 @@ button[type='submit'],
 .s-button-icon,
 button[aria-label*='wishlist'],
 button[aria-label*='المفضلة'] {
-  background: rgba(255, 255, 255, 0.76) !important;
-  border: 1px solid rgba(234, 230, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  border: 1px solid rgba(234, 230, 255, 0.84) !important;
   box-shadow: 0 10px 22px rgba(47, 53, 82, 0.06) !important;
 }
 
-/* =========================================================
-   Sections
-   ========================================================= */
-
-section,
-.s-block {
-  position: relative;
-}
-
+/* Native section titles */
 .s-block__title,
 .s-block-title,
 .section-title,
 h2 {
   color: var(--ck-heading) !important;
-  font-weight: 900 !important;
+  font-weight: 950 !important;
   letter-spacing: -0.02em;
 }
 
-.s-block__title::after,
-.section-title::after {
-  content: '';
-  display: block;
-  width: 54px;
-  height: 5px;
-  margin: 12px auto 0;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--ck-primary), var(--ck-secondary));
+/* =========================================================
+   Soft Banner
+   ========================================================= */
+
+.ck-soft-banner {
+  padding: 40px 0 70px;
+}
+
+.ck-soft-banner__panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 34px;
+  border-radius: var(--ck-radius-xl);
+  background:
+    radial-gradient(circle at top left, rgba(217, 238, 255, 0.82), transparent 34%),
+    linear-gradient(135deg, rgba(255,255,255,0.82), rgba(247,201,212,0.24));
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  box-shadow: var(--ck-shadow-card);
+}
+
+.ck-soft-banner__panel h2 {
+  margin: 10px 0 0;
+  color: var(--ck-heading);
+  font-size: clamp(26px, 3vw, 42px);
+  font-weight: 950;
+}
+
+.ck-soft-banner__panel p {
+  max-width: 640px;
+  margin: 12px 0 0;
+  color: var(--ck-body);
+  line-height: 1.9;
 }
 
 /* =========================================================
@@ -478,13 +719,13 @@ footer a,
 }
 
 /* =========================================================
-   Mobile
+   Responsive
    ========================================================= */
 
 @media (max-width: 991px) {
   .ck-hero__panel {
     grid-template-columns: 1fr;
-    padding: 38px 26px;
+    padding: 40px 26px;
     min-height: auto;
     text-align: center;
   }
@@ -494,22 +735,36 @@ footer a,
     margin-right: auto;
   }
 
-  .ck-hero__actions {
+  .ck-hero__actions,
+  .ck-hero__trust {
     justify-content: center;
   }
 
   .ck-hero__visual {
-    min-height: 260px;
+    min-height: 290px;
+  }
+
+  .ck-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ck-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ck-soft-banner__panel {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
 @media (max-width: 767px) {
-  .ck-hero {
-    padding: 22px 0 34px;
+  .ck-container {
+    width: min(100% - 20px, 1180px);
   }
 
-  .ck-hero__container {
-    width: min(100% - 20px, 1180px);
+  .ck-hero {
+    padding: 22px 0 34px;
   }
 
   .ck-hero__panel {
@@ -517,7 +772,7 @@ footer a,
     padding: 28px 18px;
   }
 
-  .ck-hero__badge {
+  .ck-badge {
     font-size: 12px;
     margin-bottom: 16px;
   }
@@ -536,36 +791,59 @@ footer a,
     margin-top: 22px;
   }
 
-  .ck-btn-primary,
-  .ck-btn-glass {
+  .ck-btn {
     min-height: 44px;
     padding: 0 22px;
     font-size: 14px;
   }
 
   .ck-hero__visual {
-    min-height: 210px;
+    min-height: 230px;
   }
 
-  .ck-hero__circle {
+  .ck-hero__orb {
     width: 210px;
     height: 210px;
   }
 
   .ck-hero__toy {
-    font-size: 76px;
+    font-size: 74px;
   }
 
-  .ck-hero__mini-card {
+  .ck-floating-card {
+    min-width: 138px;
+    padding: 12px 14px;
+  }
+
+  .ck-floating-card--one {
     right: 50%;
     bottom: 0;
     transform: translateX(50%);
-    min-width: 150px;
-    padding: 13px 16px;
+  }
+
+  .ck-floating-card--two {
+    display: none;
+  }
+
+  .ck-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ck-category-card {
+    min-height: 150px;
   }
 
   .s-product-card-content,
   .product-entry__content {
     padding: 14px !important;
+  }
+
+  .ck-soft-banner {
+    padding: 26px 0 48px;
+  }
+
+  .ck-soft-banner__panel {
+    padding: 26px 18px;
+    border-radius: 28px;
   }
 }
