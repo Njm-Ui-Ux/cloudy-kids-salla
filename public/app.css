@@ -2988,6 +2988,12 @@ textarea.s-input{
         padding-right: 0.625rem;
     }
 }
+.s-advertisement-content > img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .s-advertisement-content-main{
     flex: 1 1 0%;
     text-align: center;
@@ -22634,6 +22640,12 @@ model-viewer[style*=width]:before{
         padding-right: 0.625rem;
     }
 }
+.s-comments-product .s-comments-container > img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .share-btns-list{
     position: absolute;
     top: 3rem;
@@ -24500,6 +24512,99 @@ iframe.tawk-widget {
 body.font-dinnextltarabic-regular .btn--add-to-cart {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+/* Cloudy Kids Theme Base */
+:root {
+  --ck-bg: #fcf8f8;
+  --ck-primary: #f7c9d4;
+  --ck-secondary: #eae6ff;
+  --ck-peach: #f7c9be;
+  --ck-sky: #d9eeff;
+  --ck-heading: #2f3552;
+  --ck-body: #59617b;
+  --ck-muted: #9ca4be;
+  --ck-glass: rgba(255, 255, 255, 0.68);
+  --ck-border: rgba(255, 255, 255, 0.8);
+  --ck-radius-lg: 32px;
+  --ck-radius-pill: 999px;
+  --ck-shadow-soft: 0 18px 45px rgba(47, 53, 82, 0.08);
+  --ck-shadow-button: 0 12px 30px rgba(247, 201, 212, 0.45);
+}
+body {
+  background: radial-gradient(circle at top right, rgba(234, 230, 255, 0.9), transparent 34%), radial-gradient(circle at top left, rgba(217, 238, 255, 0.8), transparent 30%), linear-gradient(180deg, #fcf8f8 0%, #ffffff 100%);
+  background: radial-gradient(circle at top right, rgba(234, 230, 255, 0.9), transparent 34%), radial-gradient(circle at top left, rgba(217, 238, 255, 0.8), transparent 30%), linear-gradient(180deg, var(--ck-bg) 0%, #ffffff 100%);
+  color: #59617b;
+  color: var(--ck-body);
+}
+.s-product-card-entry,
+.product-entry,
+.salla-product-card {
+  border-radius: 32px !important;
+  border-radius: var(--ck-radius-lg) !important;
+  background: rgba(255, 255, 255, 0.68) !important;
+  background: var(--ck-glass) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid var(--ck-border) !important;
+  box-shadow: 0 18px 45px rgba(47, 53, 82, 0.08) !important;
+  box-shadow: var(--ck-shadow-soft) !important;
+}
+.s-product-card-entry,
+.product-entry,
+.salla-product-card {
+  overflow: hidden;
+}
+button,
+.s-button-btn,
+.s-add-product-button-main {
+  border-radius: 999px !important;
+  border-radius: var(--ck-radius-pill) !important;
+}
+.s-add-product-button-main {
+  background: linear-gradient(135deg, #f7c9d4, #f7c9be) !important;
+  background: linear-gradient(135deg, var(--ck-primary), var(--ck-peach)) !important;
+  color: #2f3552 !important;
+  color: var(--ck-heading) !important;
+  border: none !important;
+  box-shadow: 0 12px 30px rgba(247, 201, 212, 0.45) !important;
+  box-shadow: var(--ck-shadow-button) !important;
+}
+a,
+.s-product-card-content-title a {
+  color: #2f3552;
+  color: var(--ck-heading);
+}
+.s-product-card-price,
+.s-product-card-sale-price {
+  color: #b26d87 !important;
+}
+.s-product-card-price,
+.s-product-card-sale-price {
+  font-weight: 700;
+}
+/* Fix oversized logo/images in preview */
+header img,
+.navbar-brand img,
+.s-logo img,
+.store-logo img,
+.main-logo img,
+.site-logo img {
+  max-height: 54px !important;
+  width: auto !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+/* Prevent random huge images from breaking homepage */
+main > img,
+.main-content > img,
+.container > img {
+  max-width: 100% !important;
+  height: auto !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+/* Basic Cloudy Kids page background */
+body {
+  background: radial-gradient(circle at top right, rgba(234, 230, 255, 0.85), transparent 34%), radial-gradient(circle at top left, rgba(217, 238, 255, 0.75), transparent 30%), linear-gradient(180deg, #fcf8f8 0%, #ffffff 100%) !important;
 }
 .before\:text-orange-300::before{
     content: var(--tw-content);
