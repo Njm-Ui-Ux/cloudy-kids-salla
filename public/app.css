@@ -24606,23 +24606,6 @@ main > img,
 body {
   background: radial-gradient(circle at top right, rgba(234, 230, 255, 0.85), transparent 34%), radial-gradient(circle at top left, rgba(217, 238, 255, 0.75), transparent 30%), linear-gradient(180deg, #fcf8f8 0%, #ffffff 100%) !important;
 }
-/* TEST - Cloudy Kids CSS Loaded */
-body {
-  background: #fcf8f8 !important;
-}
-body::before {
-  content: "Cloudy Kids CSS Loaded";
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  z-index: 999999;
-  background: #f7c9d4;
-  color: #2f3552;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-weight: 700;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-}
 .before\:text-orange-300::before{
     content: var(--tw-content);
     --tw-text-opacity: 1;
