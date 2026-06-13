@@ -25878,41 +25878,49 @@ button[type=submit] {
   border: 1px solid rgba(255, 255, 255, 0.86);
   box-shadow: 0 24px 70px rgba(74, 71, 132, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.72);
 }
+/* =========================================================
+  Offer Discount Text On Cloud
+  ========================================================= */
 .ck-offer-banner__discount {
-  position: relative;
-  z-index: 2;
-  width: 150px;
-  min-height: 120px;
-  border-radius: 30px;
-  display: flex;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  width: 150px !important;
+  min-height: 110px !important;
+  display: flex !important;
+  color: #b66f9b !important;
+}
+.ck-offer-banner__discount {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.62);
-  border: 1px solid rgba(255, 255, 255, 0.84);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  color: #b66f9b;
   text-align: center;
-  box-shadow: 0 14px 34px rgba(74, 71, 132, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.74);
+  transform: translateX(-28px);
 }
-.ck-offer-banner__discount span,
-.ck-offer-banner__discount small {
-  display: block;
-  font-size: 13px;
-  font-weight: 850;
+.ck-offer-banner__discount span {
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: #b66f9b !important;
 }
 .ck-offer-banner__discount strong {
-  display: block;
-  margin: 4px 0;
-  font-size: 42px;
-  line-height: 1;
-  font-weight: 950;
+  margin: 4px 0 !important;
+  font-size: 42px !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  color: #b66f9b !important;
+}
+.ck-offer-banner__discount small {
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  color: #b66f9b !important;
 }
 .ck-offer-banner__content {
   position: relative;
   z-index: 2;
   text-align: center;
+  transform: translateX(130px);
 }
 .ck-offer-banner__content h2 {
   color: #4b477f !important;
@@ -25960,7 +25968,282 @@ button[type=submit] {
   FORCE Offer Banner Background Image
   ========================================================= */
 .ck-offer-banner__panel.ck-offer-banner__panel--image-bg {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.16) 34%, rgba(255, 255, 255, 0.24) 70%, rgba(255, 255, 255, 0.42) 100%), url("../../images/cloudy-kids-offer.png") center center/100% auto no-repeat !important;
+  min-height: 170px !important;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.12) 34%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0.36) 100%), url("../../images/cloudy-kids-offer.png") center 38%/100% auto no-repeat !important;
+}
+/* =========================================================
+  Fix Product Section Background Band
+  ========================================================= */
+.ck-products-area {
+  background: linear-gradient(180deg, #fffaff 0%, #ffffff 50%, #fbf7ff 100%) !important;
+}
+.ck-products-area {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.ck-products-area::before,
+.ck-products-area::after {
+  display: none !important;
+}
+.ck-products-native {
+  background: transparent !important;
+}
+.ck-products-native {
+  position: relative;
+  z-index: 2;
+}
+.s-block,
+.s-block-wrapper,
+.s-products-list-wrapper,
+.s-product-list,
+.s-products-slider {
+  background: transparent !important;
+}
+/* =========================================================
+  Offer Banner Spacing + Layout Fix
+  ========================================================= */
+/* تقليل الفراغ بين المنتجات والبنر */
+.ck-products-area {
+  padding-bottom: 18px !important;
+}
+/* تقليل فراغ زر تحميل المزيد فوق البنر */
+.ck-products-area + .ck-offer-banner,
+.ck-offer-banner {
+  padding-top: 12px !important;
+  padding-bottom: 28px !important;
+}
+/* تثبيت البنر وضبط صورته */
+.ck-offer-banner__panel.ck-offer-banner__panel--image-bg {
+  min-height: 80px !important;
+  padding: 4px 34px !important;
+  display: grid !important;
+  grid-template-columns: 190px 1fr 170px !important;
+  align-items: center !important;
+  grid-gap: 24px !important;
+  gap: 24px !important;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.08) 34%, rgba(255, 255, 255, 0.14) 70%, rgba(255, 255, 255, 0.26) 100%), url("../../images/cloudy-kids-offer.png") center center/cover no-repeat !important;
+  border-radius: 34px !important;
+}
+/* زر العرض يسار */
+.ck-offer-banner__button {
+  grid-column: 1 !important;
+  justify-self: start !important;
+  align-self: center !important;
+  min-width: 150px !important;
+  transform: translateX(-970px) !important;
+}
+/* النص يتحرك يمين عشان يبتعد عن الدبدوب والهدية */
+.ck-offer-banner__content {
+  grid-column: 2 !important;
+  justify-self: center !important;
+  text-align: center !important;
+  max-width: 520px !important;
+  transform: translateX(220px) !important;
+}
+.ck-offer-banner__content .ck-pill {
+  margin-bottom: 8px !important;
+}
+.ck-offer-banner__content h2 {
+  margin: 6px 0 0 !important;
+  font-size: max(28px, min(3vw, 40px)) !important;
+  line-height: 1.15 !important;
+}
+.ck-offer-banner__content p {
+  max-width: 560px !important;
+  margin-top: 6px !important;
+  font-size: 13.5px !important;
+  line-height: 1.7 !important;
+}
+/* الخصم فوق الغيمة يمين */
+.ck-offer-banner__discount {
+  grid-column: 3 !important;
+  justify-self: end !important;
+  align-self: center !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  width: 150px !important;
+  min-height: 100px !important;
+  transform: translate(940px, 90px) !important;
+}
+/* تقليل الفراغ بعد البنر وقبل وصل حديثًا */
+.ck-offer-banner + .ck-new-arrivals {
+  padding-top: 10px !important;
+}
+/* الجوال */
+@media (max-width: 991px) {
+  .ck-offer-banner__panel.ck-offer-banner__panel--image-bg {
+    grid-template-columns: 1fr !important;
+    min-height: 340px !important;
+    padding: 26px 20px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .ck-offer-banner__button,
+  .ck-offer-banner__content,
+  .ck-offer-banner__discount {
+    grid-column: 1 !important;
+    justify-self: center !important;
+    transform: none !important;
+  }
+}
+/* =========================================================
+  Offer Section Background Cleanup
+  ========================================================= */
+.ck-products-area {
+  background: linear-gradient(180deg, #ffffff 0%, #fffaff 55%, #fbf7ff 100%) !important;
+}
+.ck-new-arrivals {
+  background: linear-gradient(180deg, #fbf7ff 0%, #fffaff 42%, #ffffff 100%) !important;
+}
+.ck-offer-banner::before,
+.ck-offer-banner::after {
+  display: none !important;
+}
+.ck-offer-banner__panel.ck-offer-banner__panel--image-bg {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+/* =========================================================
+  Section Background Harmony
+  ========================================================= */
+.ck-products-area {
+  background: linear-gradient(180deg, #ffffff 0%, #fffaff 55%, #fbf7ff 100%) !important;
+}
+.ck-offer-banner {
+  background: linear-gradient(180deg, #fbf7ff 0%, #fffaff 35%, #fff6f8 68%, #fbf7ff 100%) !important;
+}
+.ck-new-arrivals {
+  background: linear-gradient(180deg, #fbf7ff 0%, #fffaff 42%, #ffffff 100%) !important;
+}
+/* =========================================================
+  Global Cloudy Kids Unified Background
+  ========================================================= */
+body {
+  background: radial-gradient(circle at 12% 8%, rgba(247, 198, 220, 0.22), transparent 30%), radial-gradient(circle at 88% 12%, rgba(220, 211, 255, 0.28), transparent 34%), radial-gradient(circle at 20% 52%, rgba(255, 215, 199, 0.18), transparent 34%), radial-gradient(circle at 82% 72%, rgba(238, 232, 255, 0.24), transparent 36%), linear-gradient(180deg, #ffffff 0%, #fffaff 22%, #fbf7ff 48%, #fff7f8 72%, #ffffff 100%) !important;
+}
+.ck-page {
+  background: transparent !important;
+}
+.ck-page {
+  position: relative;
+  overflow: hidden;
+}
+.ck-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.46), transparent 28%), radial-gradient(circle at 8% 64%, rgba(247, 198, 220, 0.12), transparent 28%), radial-gradient(circle at 92% 84%, rgba(220, 211, 255, 0.16), transparent 32%);
+}
+.ck-page > section {
+  background: transparent !important;
+}
+.ck-page > section {
+  position: relative;
+  z-index: 1;
+}
+/* =========================================================
+  Remove Section Background Separators
+  ========================================================= */
+.ck-products-area,
+.ck-offer-banner,
+.ck-new-arrivals,
+.ck-trust-row,
+.ck-testimonials,
+.ck-newsletter,
+.ck-category-strip {
+  background: transparent !important;
+}
+.ck-products-area::before,
+.ck-products-area::after,
+.ck-offer-banner::before,
+.ck-offer-banner::after,
+.ck-new-arrivals::before,
+.ck-new-arrivals::after,
+.ck-trust-row::before,
+.ck-trust-row::after {
+  display: none !important;
+}
+/* =========================================================
+  Cards Stay Floating Above Unified Background
+  ========================================================= */
+.ck-arrival-card,
+.ck-trust-row__panel,
+.ck-testimonial-card,
+.ck-newsletter__panel,
+.s-product-card-entry,
+.product-entry,
+.salla-product-card,
+.s-product-card-vertical {
+  background: rgba(255, 255, 255, 0.68) !important;
+  border: 1px solid rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 18px 50px rgba(74, 71, 132, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.74) !important;
+}
+.ck-arrival-card,
+.ck-trust-row__panel,
+.ck-testimonial-card,
+.ck-newsletter__panel,
+.s-product-card-entry,
+.product-entry,
+.salla-product-card,
+.s-product-card-vertical {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+/* =========================================================
+  Kill Native Salla White Section Bands
+  ========================================================= */
+#app,
+.app,
+.app-inner,
+main,
+.ck-page,
+.ck-page > section,
+.s-block,
+.s-block-wrapper,
+.s-slider-block,
+.s-products-slider,
+.s-products-list-wrapper,
+.s-product-list,
+.s-products-list,
+.s-section,
+.s-section-wrapper,
+section[class*=s-],
+div[class*=s-block] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+/* نخلي الخلفية العامة واحدة وممتدة */
+body {
+  background: radial-gradient(circle at 12% 8%, rgba(247, 198, 220, 0.2), transparent 30%), radial-gradient(circle at 88% 12%, rgba(220, 211, 255, 0.26), transparent 34%), radial-gradient(circle at 20% 52%, rgba(255, 215, 199, 0.16), transparent 34%), radial-gradient(circle at 82% 72%, rgba(238, 232, 255, 0.22), transparent 36%), linear-gradient(180deg, #ffffff 0%, #fffaff 22%, #fbf7ff 48%, #fff7f8 72%, #ffffff 100%) !important;
+  background-attachment: scroll !important;
+}
+/* منطقة المنتجات نفسها تكون شفافة بدون شريط */
+.ck-products-area,
+.ck-products-native {
+  background: transparent !important;
+  background-color: transparent !important;
+  isolation: auto !important;
+}
+/* لو فيه طبقات pseudo تسوي الفاصل */
+.ck-products-area::before,
+.ck-products-area::after,
+.ck-products-native::before,
+.ck-products-native::after,
+.s-block::before,
+.s-block::after,
+.s-block-wrapper::before,
+.s-block-wrapper::after {
+  display: none !important;
+  content: none !important;
 }
 .before\:text-orange-300::before{
     content: var(--tw-content);
