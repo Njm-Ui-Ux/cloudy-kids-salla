@@ -24,16 +24,16 @@
     "mmenu-light": "^3.0.9",
     "sweetalert2": "^11.26.17"
   },
-  "devDependencies": {
+    "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/plugin-transform-runtime": "^7.29.0",
-    "@babel/preset-env": "^7.29.2",
-    "@salla.sa/twilight": "^2.14.466",
-    "@salla.sa/twilight-components": "^2.14.466",
-    "@salla.sa/twilight-tailwind-theme": "^2.14.466",
+    "@babel/preset-env": "^7.29.0",
+    "@salla.sa/twilight": "2.14.363",
+    "@salla.sa/twilight-components": "2.14.363",
+    "@salla.sa/twilight-tailwind-theme": "2.14.363",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/line-clamp": "^0.4.0",
-    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "@tailwindcss/nesting": "^0.0.0-insiders.565c3de",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
     "babel-loader-exclude-node-modules-except": "^1.2.4",
@@ -46,10 +46,10 @@
     "postcss-import": "^16.1.1",
     "postcss-loader": "^8.2.0",
     "postcss-preset-env": "^8.0.1",
-    "sass": "^1.99.0",
+    "sass": "^1.90.0",
     "sass-loader": "^16.0.6",
     "tailwindcss": "^3.4.19",
-    "webpack": "^5.107.1",
+    "webpack": "^5.107.2",
     "webpack-cli": "^5.0.1"
   }
-}
+  }

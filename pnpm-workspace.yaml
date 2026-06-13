@@ -1,2 +1,15 @@
+packages:
+  - .
+
+minimumReleaseAge: 0
+
+overrides:
+  "@salla.sa/twilight": "2.14.363"
+  "@salla.sa/twilight-components": "2.14.363"
+  "@salla.sa/twilight-tailwind-theme": "2.14.363"
+
 allowBuilds:
-  '@parcel/watcher': set this to true or false
+  '@parcel/watcher': true
+  bufferutil: true
+  es5-ext: true
+  utf-8-validate: true
