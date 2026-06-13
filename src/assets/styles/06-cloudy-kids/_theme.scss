@@ -1625,7 +1625,7 @@ button[type='submit'] {
    ========================================================= */
 
 .ck-offer-banner__panel.ck-offer-banner__panel--image-bg {
-  background-image:
+  background:
     linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.22) 0%,
@@ -1633,9 +1633,5 @@ button[type='submit'] {
       rgba(255, 255, 255, 0.24) 70%,
       rgba(255, 255, 255, 0.42) 100%
     ),
-    url('../../images/cloudy-kids-offer.png') !important;
-
-  background-size: 100% auto !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
+    url('../../images/cloudy-kids-offer.png') center center / 100% auto no-repeat !important;
 }
