@@ -25679,8 +25679,8 @@ button[type=submit] {
 .ck-hero-v2__panel--image-bg {
   display: block !important;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.08) 34%, rgba(255, 255, 255, 0.3) 58%, rgba(255, 255, 255, 0.5) 100%), var(--ck-hero-bg) !important;
-  background-size: auto 112% !important;
-  background-position: left center top -28px !important;
+  background-size: 100% auto !important;
+  background-position: left 0 top 0 !important;
   background-repeat: no-repeat !important;
 }
 .ck-hero-v2__panel--image-bg {
@@ -25691,17 +25691,6 @@ button[type=submit] {
   padding: 54px 72px;
   border: 1px solid rgba(255, 255, 255, 0.86);
   box-shadow: 0 26px 80px rgba(74, 71, 132, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.65);
-}
-.ck-hero-v2__panel--image-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 1;
-  background: radial-gradient(circle at 78% 46%, rgba(255, 255, 255, 0.13), transparent 34%), linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.04));
 }
 .ck-hero-v2__panel--image-bg::after {
   content: "";
@@ -25839,8 +25828,8 @@ button[type=submit] {
 .ck-hero-v2__panel.ck-hero-v2__panel--image-bg {
   display: block !important;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.08) 34%, rgba(255, 255, 255, 0.3) 58%, rgba(255, 255, 255, 0.5) 100%), url("../../images/cloudy-kids-hero.png") !important;
-  background-size: 102% auto !important;
-  background-position: left 0% top 22px !important;
+  background-size: 100% auto !important;
+  background-position: 0 -20px !important;
   background-repeat: no-repeat !important;
 }
 .ck-hero-v2__panel.ck-hero-v2__panel--image-bg {
