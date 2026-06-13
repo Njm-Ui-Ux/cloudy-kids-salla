@@ -25704,7 +25704,7 @@ button[type=submit] {
 .ck-hero-v2__panel--image-bg {
   grid-template-columns: 1fr !important;
   display: flex !important;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.78) 32%, rgba(255, 255, 255, 0.18) 58%, rgba(255, 255, 255, 0.05) 100%), url("/images/cloudy-kids-hero.png") !important;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.78) 32%, rgba(255, 255, 255, 0.18) 58%, rgba(255, 255, 255, 0.05) 100%), var(--ck-hero-bg) !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
