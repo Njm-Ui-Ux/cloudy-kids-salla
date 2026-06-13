@@ -61,4 +61,31 @@ a,
 .s-product-card-sale-price {
   color: #b26d87 !important;
   font-weight: 700;
+}/* Fix oversized logo/images in preview */
+header img,
+.navbar-brand img,
+.s-logo img,
+.store-logo img,
+.main-logo img,
+.site-logo img {
+  max-height: 54px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+/* Prevent random huge images from breaking homepage */
+main > img,
+.main-content > img,
+.container > img {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Basic Cloudy Kids page background */
+body {
+  background:
+    radial-gradient(circle at top right, rgba(234, 230, 255, 0.85), transparent 34%),
+    radial-gradient(circle at top left, rgba(217, 238, 255, 0.75), transparent 30%),
+    linear-gradient(180deg, #fcf8f8 0%, #ffffff 100%) !important;
 }
