@@ -25852,6 +25852,110 @@ button[type=submit] {
   width: min(460px, 100%);
   direction: rtl;
 }
+/* =========================================================
+  Cloudy Kids Offer Banner - Image Background
+  ========================================================= */
+.ck-offer-banner {
+  padding: 26px 0 38px;
+}
+.ck-offer-banner__panel--image-bg {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.16) 34%, rgba(255, 255, 255, 0.24) 70%, rgba(255, 255, 255, 0.42) 100%), url("../../images/cloudy-kids-offer.png") !important;
+  background-size: 100% auto !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+.ck-offer-banner__panel--image-bg {
+  position: relative;
+  min-height: 170px;
+  border-radius: 34px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  align-items: center;
+  grid-gap: 24px;
+  gap: 24px;
+  padding: 28px 34px;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  box-shadow: 0 24px 70px rgba(74, 71, 132, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+.ck-offer-banner__discount {
+  position: relative;
+  z-index: 2;
+  width: 150px;
+  min-height: 120px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #b66f9b;
+  text-align: center;
+  box-shadow: 0 14px 34px rgba(74, 71, 132, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.74);
+}
+.ck-offer-banner__discount span,
+.ck-offer-banner__discount small {
+  display: block;
+  font-size: 13px;
+  font-weight: 850;
+}
+.ck-offer-banner__discount strong {
+  display: block;
+  margin: 4px 0;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 950;
+}
+.ck-offer-banner__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.ck-offer-banner__content h2 {
+  color: #4b477f !important;
+  font-weight: 950 !important;
+}
+.ck-offer-banner__content h2 {
+  margin: 12px 0 0;
+  font-size: max(28px, min(3vw, 42px));
+  letter-spacing: -0.035em;
+}
+.ck-offer-banner__content p {
+  max-width: 640px;
+  margin: 10px auto 0;
+  color: #5f5a82;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.ck-offer-banner__button {
+  position: relative;
+  z-index: 2;
+  justify-self: start;
+  min-width: 140px;
+}
+/* Mobile */
+@media (max-width: 991px) {
+  .ck-offer-banner__panel--image-bg {
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+  .ck-offer-banner__panel--image-bg {
+    grid-template-columns: 1fr;
+    min-height: 360px;
+    text-align: center;
+    padding: 28px 22px;
+  }
+  .ck-offer-banner__discount {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ck-offer-banner__button {
+    justify-self: center;
+  }
+}
 .before\:text-orange-300::before{
     content: var(--tw-content);
     --tw-text-opacity: 1;
