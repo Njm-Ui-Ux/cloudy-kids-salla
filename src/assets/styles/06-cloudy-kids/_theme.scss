@@ -1246,6 +1246,7 @@ button[type='submit'] {
     inset 0 1px 0 rgba(255,255,255,0.78);
 }/* =========================================================
    Cloudy Kids Hero - Final Clean Version
+   Fixed Right Content + Background Image
    ========================================================= */
 
 .ck-hero-v2 {
@@ -1265,10 +1266,7 @@ button[type='submit'] {
   border-radius: 42px;
   overflow: hidden;
 
-  display: flex !important;
-  align-items: center;
-  justify-content: flex-end;
-
+  display: block !important;
   padding: 54px 72px;
 
   background-image:
@@ -1276,8 +1274,8 @@ button[type='submit'] {
       90deg,
       rgba(255, 255, 255, 0.04) 0%,
       rgba(255, 255, 255, 0.08) 34%,
-      rgba(255, 255, 255, 0.34) 58%,
-      rgba(255, 255, 255, 0.52) 100%
+      rgba(255, 255, 255, 0.30) 58%,
+      rgba(255, 255, 255, 0.50) 100%
     ),
     var(--ck-hero-bg) !important;
 
@@ -1299,42 +1297,38 @@ button[type='submit'] {
   z-index: 1;
 
   background:
-    radial-gradient(
-      circle at 78% 46%,
-      rgba(255, 255, 255, 0.18),
-      transparent 34%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.02),
-      rgba(255, 255, 255, 0.05)
-    );
+    radial-gradient(circle at 78% 46%, rgba(255, 255, 255, 0.13), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.04));
 }
 
 .ck-hero-v2__panel--image-bg::after {
   content: '';
   position: absolute;
   inset: auto 0 0 0;
-  height: 42%;
+  height: 32%;
   pointer-events: none;
   z-index: 1;
 
   background: linear-gradient(
     180deg,
     transparent,
-    rgba(255, 255, 255, 0.10)
+    rgba(255, 255, 255, 0.06)
   );
 }
 
-.ck-hero-v2__content {
+.ck-hero-v2__panel--image-bg .ck-hero-v2__content {
   position: relative;
   z-index: 2;
+
   width: min(460px, 100%);
-  text-align: right;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+
+  text-align: right !important;
+  direction: rtl;
 }
 
-.ck-hero-v2__content .ck-pill,
-.ck-pill {
+.ck-hero-v2__panel--image-bg .ck-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1359,7 +1353,7 @@ button[type='submit'] {
     inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
-.ck-hero-v2__title {
+.ck-hero-v2__panel--image-bg .ck-hero-v2__title {
   margin: 0;
   color: #4b477f;
   font-size: clamp(46px, 5vw, 76px);
@@ -1369,12 +1363,12 @@ button[type='submit'] {
   text-shadow: 0 8px 32px rgba(255, 255, 255, 0.45);
 }
 
-.ck-hero-v2__title span {
+.ck-hero-v2__panel--image-bg .ck-hero-v2__title span {
   display: block;
   color: #b66f9b;
 }
 
-.ck-hero-v2__text {
+.ck-hero-v2__panel--image-bg .ck-hero-v2__text {
   max-width: 460px;
   margin: 22px 0 0;
   color: #5f5a82;
@@ -1383,120 +1377,13 @@ button[type='submit'] {
   text-shadow: 0 6px 22px rgba(255, 255, 255, 0.42);
 }
 
-.ck-hero-v2__actions {
+.ck-hero-v2__panel--image-bg .ck-hero-v2__actions {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 14px;
   margin-top: 30px;
   flex-wrap: wrap;
-}
-
-.ck-btn-v2 {
-  position: relative;
-  isolation: isolate;
-
-  min-height: 52px;
-  padding: 0 30px;
-  gap: 10px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 999px !important;
-  overflow: hidden;
-
-  font-size: 15px;
-  font-weight: 900;
-  line-height: 1;
-  text-decoration: none !important;
-  white-space: nowrap;
-
-  transition:
-    transform 280ms ease,
-    box-shadow 280ms ease,
-    background 280ms ease,
-    border-color 280ms ease;
-}
-
-.ck-btn-v2::before {
-  content: '';
-  position: absolute;
-  inset: 1px;
-  border-radius: inherit;
-  z-index: -1;
-  pointer-events: none;
-
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.58),
-    rgba(255, 255, 255, 0.14)
-  );
-}
-
-.ck-btn-v2:hover {
-  transform: translateY(-3px) scale(1.015);
-}
-
-.ck-btn-v2--primary {
-  min-width: 150px;
-
-  color: #302d58 !important;
-  background:
-    radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.75), transparent 34%),
-    linear-gradient(135deg, #b7a8ff 0%, #f2a8cd 58%, #ffd0bf 100%) !important;
-
-  border: 1px solid rgba(255, 255, 255, 0.72) !important;
-
-  box-shadow:
-    0 16px 36px rgba(178, 136, 213, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.68),
-    inset 0 -10px 22px rgba(151, 108, 199, 0.08) !important;
-}
-
-.ck-btn-v2--primary i {
-  width: 28px;
-  height: 28px;
-
-  display: inline-grid;
-  place-items: center;
-
-  border-radius: 50%;
-  font-style: normal;
-
-  color: #5b4ca6;
-  background: rgba(255, 255, 255, 0.52);
-
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
-
-  transition: transform 280ms ease;
-}
-
-.ck-btn-v2--primary:hover i {
-  transform: translateX(-4px);
-}
-
-.ck-btn-v2--secondary {
-  min-width: 142px;
-
-  color: #5a548d !important;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.82),
-    rgba(255, 255, 255, 0.52)
-  ) !important;
-
-  border: 1px solid rgba(207, 194, 255, 0.68) !important;
-
-  box-shadow:
-    0 14px 32px rgba(74, 71, 132, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.82) !important;
-}
-
-.ck-btn-v2--secondary:hover {
-  color: #b66f9b !important;
-  border-color: rgba(221, 142, 184, 0.42) !important;
 }
 
 /* Hide old visual/image box if it still exists */
@@ -1515,10 +1402,6 @@ button[type='submit'] {
 
   .ck-hero-v2__panel--image-bg {
     min-height: 500px;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: center;
-
     padding: 34px 24px;
 
     background-image:
@@ -1535,16 +1418,16 @@ button[type='submit'] {
     background-position: center bottom !important;
   }
 
-  .ck-hero-v2__content {
-    margin-inline: auto;
-    text-align: center;
+  .ck-hero-v2__panel--image-bg .ck-hero-v2__content {
+    margin-inline: auto !important;
+    text-align: center !important;
   }
 
-  .ck-hero-v2__text {
+  .ck-hero-v2__panel--image-bg .ck-hero-v2__text {
     margin-inline: auto;
   }
 
-  .ck-hero-v2__actions {
+  .ck-hero-v2__panel--image-bg .ck-hero-v2__actions {
     justify-content: center;
   }
 }
@@ -1564,11 +1447,11 @@ button[type='submit'] {
     background-position: center bottom !important;
   }
 
-  .ck-hero-v2__title {
+  .ck-hero-v2__panel--image-bg .ck-hero-v2__title {
     font-size: 38px;
   }
 
-  .ck-hero-v2__text {
+  .ck-hero-v2__panel--image-bg .ck-hero-v2__text {
     font-size: 14px;
     line-height: 1.85;
   }
